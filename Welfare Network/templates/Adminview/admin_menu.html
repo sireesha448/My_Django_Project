@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+            .dropbtn {
+                      background-color:darkcyan;
+                      color: white;
+                      padding: 15px;
+                      font-size: 15px;
+                      border: none;
+                      cursor: pointer;
+                    }
+
+
+            .dropdown-content {
+                      display: none;
+                      position: absolute;
+                      background-color:silver;
+                      min-width: 10px;
+                      box-shadow: 1px 10px 10px 1px rgba(0,0,0,0.2);
+                      z-index: 1;
+                    }
+
+
+            .dropdown-content a {
+                      color: black;
+                      padding: 15px 15px;
+                      text-decoration:dashed;
+                      display: block;
+                    }
+
+
+            .dropdown-content a:hover {background-color:rosybrown}
+
+
+            .dropdown:hover .dropdown-content {
+                      display: block;
+                    }
+
+        </style>
+    <style>
+         .button {
+                  background-color:firebrick;
+                  border: none;
+                  color: white;
+                  padding: 15px 32px;
+                  text-align: center;
+                  text-decoration: none;
+                  display: inline-block;
+                  font-size: 16px;
+                }
+
+    </style>
+</head>
+<body>
+<h1 style="font-size:6vw"; align="center" ><font color="#00008b"> Admin Home Page </font></h1>
+<table align="center">
+    <tr>
+        <th>
+            <div class="dropdown">
+            <button class="dropbtn">USERS</button>
+            <div class="dropdown-content">
+            <a href="/viewapprovalusers/">Approval Users</a>
+            <a href="/viewacceptedusers/">Accepted Users</a>
+            <a href="/viewrejectedusers/">Rejected Users</a>
+            </div>
+        </div>
+        </th>
+
+        <th>
+            <div class="dropdown">
+            <button class="dropbtn">REPORTS</button>
+            <div class="dropdown-content">
+            <a href="/viewuserthoughts/">View Thoughts</a>
+            <a href="/viewuserevents/">View Events</a>
+            <a href="/viewusertechnical/">View Technical</a>
+            <a href="/viewuserworkexperience/">Work Experience</a>
+            <a href="/viewuserproperty/">View Property</a>
+            <a href="/viewusersharemarket/">View Sharemarket</a>
+            <a href="/viewuserreferences/">View References</a>
+            <a href="/viewusermatrimonial/">View Matrimonial</a>
+            <a href="/viewusercelebrations/">View Celebrations</a>
+            <a href="/viewusertravel/">View Travel</a>
+            </div>
+        </div>
+        </th>
+<form action= "/">
+        {% csrf_token %}
+        <th>
+            <button class="button">Logout</button>
+        </th>
+    </form>
+    </tr>
+</table>
+</body>
+</html>

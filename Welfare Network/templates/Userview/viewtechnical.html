@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% include "Userview/usermenu.html" %}<br>
+<h1 style="font-size:3vw"; align="center" ><font color="#2f4f4f">View User Technical Information</font></h1>
+{% if object_list %}
+<table align="center" border="2" bgcolor="#708090">
+    <tr bgcolor="#fa8072" height="30">
+        <th width="100">USERNAME</th>
+        <th width="100">TECHNOLOGY</th>
+        <th width="100">DESCRIPTION</th>
+        <th width="100">CONTACT_No</th>
+    </tr>
+    {% for x in object_list %}
+        <tr height="30">
+        <th width="100">{{ x.username}}</th>
+        <th width="100">{{ x.technology}}</th>
+        <th width="100">{{ x.description}}</th>
+        <th width="100">{{ x.contact_no}}</th>
+        </tr>
+    {% endfor %}
+</table>
+{% else %}
+<h3 align="center"><font color="#8a2be2">No Information Available</font> </h3>
+{% endif %}
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+         .button {
+                  background-color:palegoldenrod;
+                  border: none;
+                  color: white;
+                  padding: 100px 100px;
+                  text-align: center;
+                  text-decoration: none;
+                  display: inline-block;
+                  font-size: 16px;
+                }
+
+        </style>
+
+</head>
+<body>
+{% include "Userview/usermenu.html" %}
+<h1 style="font-size:3vw;" align="center" ><font color="#2f4f4f">Add User Thought Information </font></h1>
+<table align="center">
+    <form  method="post">
+        {% csrf_token %}
+            {{ form }}
+            {{ form.help_text }}
+            <th></th>
+            <th><br><br><button class="button">Add Thought</button></th>
+    </form>
+
+    <form action="/addthoughts/" >
+        {% csrf_token %}
+        <th><br><br><button class="button">Clear</button> </th>
+    </form>
+
+    </tr>
+</table>
+</body>
+</html>

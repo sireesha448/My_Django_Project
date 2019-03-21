@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+        <style>
+         .button {
+                  background-color:firebrick;
+                  border: none;
+                  color: white;
+                  padding: 8px 10px;
+                  text-align: center;
+                  text-decoration: none;
+                  display: inline-block;
+                  font-size: 16px;
+                }
+
+    </style>
+</head>
+<body bgcolor="#ffe4c4">
+{% include "Userview/head.html" %}
+<h1 style="font-size:3vw"; align="center" ><font color="#2f4f4f">Login Page</font></h1>
+<table align="center" border="0">
+    <form action="/login/" method="post">
+    {% csrf_token %}
+    <tr>
+        <th><br>USER NAME</th>
+        <th colspan="2"><br><input type="text"  name="name" required> </th>
+    </tr>
+    <tr>
+        <th><br>PASSWORD</th>
+        <th colspan="2"><br><input type="password" name="password" required> </th>
+    </tr>
+    <tr>
+        <th><br>USER TYPE</th>
+        <th colspan="2"><br>
+            <select name="type">
+                <option>--select--</option>
+                <option>admin</option>
+                <option>user</option>
+            </select>
+        </th>
+    </tr>
+    <tr>
+        <th><br></th>
+        <th><br><button class="button">Login</button></th>
+    </form>
+
+    <form action="/index/">
+        {% csrf_token %}
+        <th><br><button class="button">Clear</button></th>
+    </form>
+
+    </tr>
+</table>
+
+<h3 align="center"><br><a href="/newuser/">Register New User</a></h3>
+<h3 align="center"><font color="blue"> {{ msg }}</font></h3>
+</body>
+</html>

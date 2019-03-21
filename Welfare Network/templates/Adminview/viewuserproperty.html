@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% include "Adminview/admin_menu.html" %}<br>
+<h1 style="font-size:3vw"; align="center" ><font color="#2f4f4f">View  User Property</font></h1>
+{% if object_list %}
+<table align="center" border="2" bgcolor="#708090">
+    <tr bgcolor="#fa8072" height="30">
+        <th width="100">USERNAME</th>
+        <th width="100">PROPERTY_TYPE</th>
+        <th width="100">PROPERTY_TITLE</th>
+        <th width="100">AREA_IN_SIZE</th>
+        <th width="100">PRICE</th>
+        <th width="100">ADDRESS</th>
+        <th width="100">CONTACT_NO</th>
+        <th width="100">EMAIL_ID</th>
+    </tr>
+    {% for x in object_list %}
+        <tr height="30">
+        <th width="100">{{x.username}}</th>
+        <th width="100">{{ x.property_type}}</th>
+        <th width="100">{{ x.property_title}}</th>
+        <th width="100">{{ x.area_in_size}}</th>
+        <th width="100">{{ x.price}}</th>
+        <th width="100">{{ x.address}}</th>
+        <th width="100">{{ x.contact_no}}</th>
+        <th width="100">{{ x.email_id}}</th>
+        </tr>
+    {% endfor %}
+</table>
+{% else %}
+<h3 align="center"><font color="#8a2be2">No Information Available</font> </h3>
+{% endif %}
+</body>
+</html>

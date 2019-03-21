@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% include "Userview/usermenu.html" %}
+<h1 style="font-size:3vw"; align="center" ><font color="#2f4f4f">Experience Information</font></h1>
+<table align="center">
+    <form method="post">
+        {% csrf_token %}
+        {{ form }}
+        {{ form.help_text }}
+        <tr><td><br>
+            <td><br><button class="button">Add Experience</button> </td>
+    </form>
+    <form action="/addworkexperience/">
+        {% csrf_token %}
+        <td><br><button class="button">Clear</button> </td>
+    </form>
+    </tr>
+</table>
+</body>
+</html>

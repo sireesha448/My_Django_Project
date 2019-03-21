@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% include "AdminView/admin_menu.html" %}
+<h1 style="font-size:3vw"; align="center" ><font color="#2f4f4f">Accepted Users</font></h1>
+{% if object_list %}
+<table align="center" border="2">
+        <tr>
+            <th width="100">EMPLOYEE_ID</th>
+            <th width="100">USERNAME</th>
+            <th width="100">PASSWORD</th>
+            <th width="100">ADDRESS</th>
+            <th width="100">EMAIL</th>
+            <th width="100">CONTACT</th>
+            <th width="100">COMPANY_NAME</th>
+            <th width="100">STATUS</th>
+        </tr>
+        {% for x in object_list%}
+            <tr>
+                    <th width="100">{{ x.employee_id }}</th>
+                    <th width="100">{{ x.username }}</th>
+                    <th width="100">{{ x.password }}</th>
+                    <th width="100">{{ x.address }}</th>
+                    <th width="100">{{ x.email_id}}</th>
+                    <th width="100">{{ x.contact_no }}</th>
+{#                    <th width="100">{{ x.date_of_birth }}</th>#}
+                    <th width="100">{{ x.company_name }}</th>
+                    <th width="100">{{ x.status }}</th>
+            </tr>
+        {% endfor %}
+{% else %}
+<h2 align="center"><font color="#008b8b"> No User Accepted</font></h2>
+{% endif %}
+</table>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+         .button {
+                  background-color:firebrick;
+                  border: none;
+                  color: white;
+                  padding: 8px 10px;
+                  text-align: center;
+                  text-decoration: none;
+                  display: inline-block;
+                  font-size: 16px;
+                }
+
+    </style>
+</head>
+<body>
+<h1 style="font-size:3vw"; align="center" ><font color="#00008b">New User Registration</font></h1>
+    <table align="center">
+    <form  method="post">
+    {% csrf_token %}
+    {{ form }}
+    {{ form.help_text }}
+    <tr>
+        <th></th>
+        <th><br><button class="button">Register</button> </th>
+        </form>
+        <th><br>
+        <form action="/newuser/" method="post">
+            {% csrf_token %}
+            <button class="button"> Clear</button>
+        </form>
+            </th>
+    </tr>
+</table>
+</form>
+</body>
+</html>

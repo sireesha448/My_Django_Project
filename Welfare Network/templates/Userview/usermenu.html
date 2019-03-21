@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+         .button {
+                  background-color:firebrick;
+                  border: none;
+                  color: white;
+                  padding: 15px 32px;
+                  text-align: center;
+                  text-decoration: none;
+                  display: inline-block;
+                  font-size: 16px;
+                }
+
+    </style>
+    <style>
+            .dropbtn {
+                      background-color:darkcyan;
+                      color: white;
+                      padding: 15px;
+                      font-size: 15px;
+                      border: none;
+                      cursor: pointer;
+                    }
+
+
+            .dropdown-content {
+                      display: none;
+                      position: absolute;
+                      background-color:silver;
+                      min-width: 10px;
+                      box-shadow: 1px 10px 10px 1px rgba(0,0,0,0.2);
+                      z-index: 1;
+                    }
+
+
+            .dropdown-content a {
+                      color: black;
+                      padding: 15px 15px;
+                      text-decoration:dashed;
+                      display: block;
+                    }
+
+
+            .dropdown-content a:hover {background-color:rosybrown}
+
+
+            .dropdown:hover .dropdown-content {
+                      display: block;
+                    }
+
+        </style>
+</head>
+<body>
+<h1 style="font-size:6vw"; align="center" ><font color="#00008b"> User Home Page </font></h1>
+<table align="center">
+    <tr>
+        <th>
+            <div class="dropdown">
+            <button class="dropbtn">Thoughts</button>
+            <div class="dropdown-content">
+            <a href="/addthoughts/">Add Thoughts</a>
+            <a href="/viewthoughts/">View Thoughts</a>
+            </div>
+        </div>
+        </th>
+
+        <th>
+            <div class="dropdown">
+            <button class="dropbtn">Events</button>
+            <div class="dropdown-content">
+            <a href="/addevents/">Add Events</a>
+            <a href="/viewevents/">View Events</a>
+            </div>
+        </div>
+        </th>
+        <th>
+            <div class="dropdown">
+            <button class="dropbtn">Technical</button>
+            <div class="dropdown-content">
+            <a href="/addtechnical/">Add Technical</a>
+            <a href="/viewtechnical/">View Technical</a>
+            </div>
+        </div>
+        </th>
+        <th>
+            <div class="dropdown">
+            <button class="dropbtn">Work Experience</button>
+            <div class="dropdown-content">
+            <a href="/addworkexperience/">Add Work Experience</a>
+            <a href="/viewworkexperience/">View Work Experience</a>
+            </div>
+        </div>
+        </th>
+        <th>
+            <div class="dropdown">
+            <button class="dropbtn">Property</button>
+            <div class="dropdown-content">
+            <a href="/addproperty/">Add Property</a>
+            <a href="/viewproperty/">View Property</a>
+            </div>
+        </div>
+        </th>
+        <th>
+            <div class="dropdown">
+            <button class="dropbtn">Share Market</button>
+            <div class="dropdown-content">
+            <a href="/addsharemarket/">Add Share Market</a>
+            <a href="/viewsharemarket/">View Share Market</a>
+            </div>
+        </div>
+        </th>
+        <th>
+            <div class="dropdown">
+            <button class="dropbtn">Reference</button>
+            <div class="dropdown-content">
+            <a href="/addreference/">Add Reference</a>
+            <a href="/viewreference/">View Reference</a>
+            </div>
+        </div>
+        </th>
+        <th>
+            <div class="dropdown">
+            <button class="dropbtn">Matrimonial</button>
+            <div class="dropdown-content">
+            <a href="/addmatrimonial/">Add Matrimonial</a>
+            <a href="/viewmatrimonial/">View Matrimonial</a>
+            </div>
+        </div>
+        </th>
+        <th>
+            <div class="dropdown">
+            <button class="dropbtn">Celebrations</button>
+            <div class="dropdown-content">
+            <a href="/addcelebrations/">Add Celebrations</a>
+            <a href="/viewcelebrations/">View Celebrations</a>
+            </div>
+        </div>
+        </th>
+        <th>
+            <div class="dropdown">
+            <button class="dropbtn">Travel</button>
+            <div class="dropdown-content">
+            <a href="/addtravel/">Add Travel</a>
+            <a href="/viewtravel/">View Travel</a>
+            </div>
+        </div>
+        </th>
+
+    <form action="/index/">
+        {% csrf_token %}
+        <th>
+            <button class="button">Logout</button>
+        </th>
+    </form>
+    </tr>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% include "Adminview/admin_menu.html" %}<br>
+<h1 style="font-size:3vw"; align="center" ><font color="#2f4f4f">View  User ShareMarket</font></h1>
+{% if object_list %}
+<table align="center" border="2" bgcolor="#708090">
+    <tr bgcolor="#fa8072" height="30">
+        <th width="100">USERNAME</th>
+        <th width="100">COMPANY_NAME</th>
+        <th width="100">SHARE_VALUE</th>
+        <th width="100">DESCRIPTION</th>
+    </tr>
+    {% for x in object_list %}
+        <tr height="30">
+        <th width="100">{{ x.username}}</th>
+        <th width="100">{{ x.company_name}}</th>
+        <th width="100">{{ x.share_value}}</th>
+        <th width="100">{{ x.description}}</th>
+        </tr>
+    {% endfor %}
+</table>
+{% else %}
+<h2 align="center"><font color="#6a5acd"> No Information Available</font></h2>
+{% endif %}
+</body>
+</html>

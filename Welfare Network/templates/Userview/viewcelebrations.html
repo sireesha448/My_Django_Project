@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>{% include "Userview/usermenu.html" %}<BR>
+<h1 style="font-size:3vw"; align="center" ><font color="#2f4f4f">View User Celebrations</font></h1>
+{% if object_list %}
+<table align="center" border="2" bgcolor="#708090">
+    <tr bgcolor="#fa8072" height="30">
+        <th width="100">NAME</th>
+        <th width="100">ADDRESS</th>
+        <th width="100">CONTACT_NO</th>
+        <th width="100">EMAIL</th>
+        <th width="100">DATE OF BIRTH</th>
+    </tr>
+    {% for x in object_list %}
+        <tr height="30">
+        <th width="100">{{x.name}}</th>
+        <th width="100">{{ x.address}}</th>
+        <th width="100">{{ x.contact_no}}</th>
+        <th width="100">{{ x.email_id}}</th>
+        <th width="100">{{ x.date_of_birth}}</th>
+        </tr>
+    {% endfor %}
+</table>
+{% else %}
+<h3 align="center"><font color="#8a2be2">No Information Available</font> </h3>
+{% endif %} }}
+</body>
+</html>
